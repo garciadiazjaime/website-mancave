@@ -1,0 +1,244 @@
+/* ----------- SETUP -------------- */
+/* line 11, ../../sass/mixins.sass */
+.placeholders::-webkit-input-placeholder, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: black;
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 13, ../../sass/mixins.sass */
+.placeholders:-moz-placeholder, input:-moz-placeholder, textarea:-moz-placeholder {
+  color: black;
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 15, ../../sass/mixins.sass */
+.placeholders::-moz-placeholder, input::-moz-placeholder, textarea::-moz-placeholder {
+  color: black;
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 17, ../../sass/mixins.sass */
+.placeholders.placeholder, input.placeholder, textarea.placeholder {
+  color: black;
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 19, ../../sass/mixins.sass */
+.placeholders:-ms-input-placeholder, input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: black;
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* ****************** FONTFACE ************** */
+@font-face {
+  font-family: "liberator";
+  src: url("../fonts/liberator.eot");
+  src: url("../fonts/liberator.eot?#iefix") format("embedded-opentype"), url("../fonts/liberator.woff") format("woff"), url("../fonts/liberator.ttf") format("truetype"), url("../fonts/liberator.svg#liberator") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sansation";
+  src: url("../fonts/sansation.eot");
+  src: url("../fonts/sansation.eot?#iefix") format("embedded-opentype"), url("../fonts/sansation.woff") format("woff"), url("../fonts/sansation.ttf") format("truetype"), url("../fonts/sansation.svg#sansation") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sansation_light";
+  src: url("../fonts/sansation_light.eot");
+  src: url("../fonts/sansation_light.eot?#iefix") format("embedded-opentype"), url("../fonts/sansation_light.woff") format("woff"), url("../fonts/sansation_light.ttf") format("truetype"), url("../fonts/sansation_light.svg#sansation_light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sansation_bold";
+  src: url("../fonts/sansation_bold.eot");
+  src: url("../fonts/sansation_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/sansation_bold.woff") format("woff"), url("../fonts/sansation_bold.ttf") format("truetype"), url("../fonts/sansation_bold.svg#sansation_bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 47, ../../sass/fancy-box-area.sass */
+.col-xs-5 th, .col-xs-7 h3 {
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+}
+
+/* line 51, ../../sass/fancy-box-area.sass */
+body {
+  font-family: "sansation", Verdana, sans-serif;
+  font-weight: normal;
+}
+
+/* line 59, ../../sass/fancy-box-area.sass */
+.col-xs-5 table {
+  font-family: "sansation_bold", Verdana, sans-serif;
+  font-weight: normal;
+}
+
+/* ****************** GENERAL ************** */
+/* line 67, ../../sass/fancy-box-area.sass */
+body {
+  background: transparent;
+  font-size: 13px;
+}
+
+/* -------- LAYOUT ------- */
+/* line 74, ../../sass/fancy-box-area.sass */
+img {
+  margin: 0 auto 10px;
+  max-width: 100%;
+}
+
+/* line 78, ../../sass/fancy-box-area.sass */
+.wrap {
+  background: transparent url(../img/mobile_wrap_background.png) 0 0 no-repeat;
+  background-size: 100%;
+  padding: 5px 20px 10px;
+}
+
+/* line 83, ../../sass/fancy-box-area.sass */
+.logo {
+  background: url(../img/surfboard/termite_gray.png) center;
+  display: block;
+  height: 160px;
+  max-width: 100%;
+  width: 245px;
+}
+
+/* line 91, ../../sass/fancy-box-area.sass */
+.termite .logo {
+  background-image: url(../img/surfboard/termite_gray.png);
+}
+
+/* line 95, ../../sass/fancy-box-area.sass */
+.mahi .logo {
+  background-image: url(../img/surfboard/mahi_gray.png);
+}
+
+/* line 99, ../../sass/fancy-box-area.sass */
+.simmons .logo {
+  background-image: url(../img/surfboard/simmons_gray.png);
+}
+
+/* line 104, ../../sass/fancy-box-area.sass */
+.chaneque .logo {
+  background-image: url(../img/surfboard/chaneque_gray.png);
+}
+
+/* line 109, ../../sass/fancy-box-area.sass */
+.jelly_bean .logo {
+  background-image: url(../img/surfboard/jelly_bean_gray.png);
+}
+
+/* line 114, ../../sass/fancy-box-area.sass */
+.lemigun .logo {
+  background-image: url(../img/surfboard/lemigun_gray.png);
+}
+
+/* line 118, ../../sass/fancy-box-area.sass */
+.traveler .logo {
+  background-image: url(../img/surfboard/traveler_color.png);
+}
+
+/* line 123, ../../sass/fancy-box-area.sass */
+.snot_rocket .logo {
+  background-image: url(../img/surfboard/snot_rocket_gray.png);
+}
+
+/* line 128, ../../sass/fancy-box-area.sass */
+.pirate_plank .logo {
+  background-image: url(../img/surfboard/pirate_plank_gray.png);
+}
+
+/* line 133, ../../sass/fancy-box-area.sass */
+.out_of_step .logo {
+  background-image: url(../img/surfboard/out_of_step_gray.png);
+}
+
+/* line 138, ../../sass/fancy-box-area.sass */
+.the_hunter .logo {
+  background-image: url(../img/surfboard/the_hunter_gray.png);
+}
+
+/* line 143, ../../sass/fancy-box-area.sass */
+.the_caveman .logo {
+  background-image: url(../img/surfboard/the_caveman_gray.png);
+}
+
+/* line 150, ../../sass/fancy-box-area.sass */
+.col-xs-5 .wrap {
+  padding: 15px 20px;
+}
+/* line 153, ../../sass/fancy-box-area.sass */
+.col-xs-5 table {
+  background: url(../img/small_wrap_line.png) center top no-repeat;
+  background-size: 100% 2px;
+  color: #595959;
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+}
+/* line 162, ../../sass/fancy-box-area.sass */
+.col-xs-5 table .first {
+  background: url(../img/small_wrap_line.png) center bottom no-repeat;
+  background-size: 100% 2px;
+}
+/* line 166, ../../sass/fancy-box-area.sass */
+.col-xs-5 th {
+  color: #333333;
+  font-size: 11px;
+  padding: 5px 0;
+  text-align: center;
+}
+/* line 173, ../../sass/fancy-box-area.sass */
+.col-xs-5 tr.pair {
+  background: #ebebeb;
+}
+/* line 176, ../../sass/fancy-box-area.sass */
+.col-xs-5 tr.pair.second {
+  border-top: 2px solid whitesmoke;
+}
+
+/* line 184, ../../sass/fancy-box-area.sass */
+.col-xs-7 h3 {
+  background: url(../img/big_wrap_line.png) center top no-repeat;
+  background-size: 100% 2px;
+  color: #333333;
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  padding: 5px 0 0;
+}
+/* line 193, ../../sass/fancy-box-area.sass */
+.col-xs-7 h3 em {
+  color: #00caff;
+  font-size: 10px;
+  font-style: normal;
+}
+/* line 198, ../../sass/fancy-box-area.sass */
+.col-xs-7 h3 span {
+  background: url(../img/big_wrap_line.png) center bottom no-repeat;
+  background-size: 100% 2px;
+  display: block;
+  padding: 0 0 5px;
+}
+/* line 204, ../../sass/fancy-box-area.sass */
+.col-xs-7 h3 img {
+  display: block;
+  margin: 0 auto 25px;
+}

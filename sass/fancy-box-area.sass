@@ -1,0 +1,206 @@
+/* ----------- SETUP -------------- */	
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/filter"
+@import "compass/css3/font-face"
+@import "compass/css3/images"
+@import "compass/css3/opacity"
+@import "compass/css3/transition"
+
+@import "mixins.sass"
+
+$img: "../img/"
+
+/* ****************** FONTFACE ************** */
+@font-face
+	font-family: 'liberator'
+	src: url('../fonts/liberator.eot')
+	src: url('../fonts/liberator.eot?#iefix') format('embedded-opentype'), url('../fonts/liberator.woff') format('woff'), url('../fonts/liberator.ttf') format('truetype'), url('../fonts/liberator.svg#liberator') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+@font-face
+	font-family: 'sansation'
+	src: url('../fonts/sansation.eot')
+	src: url('../fonts/sansation.eot?#iefix') format('embedded-opentype'), url('../fonts/sansation.woff') format('woff'), url('../fonts/sansation.ttf') format('truetype'), url('../fonts/sansation.svg#sansation') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+@font-face
+	font-family: 'sansation_light'
+	src: url('../fonts/sansation_light.eot')
+	src: url('../fonts/sansation_light.eot?#iefix') format('embedded-opentype'), url('../fonts/sansation_light.woff') format('woff'), url('../fonts/sansation_light.ttf') format('truetype'), url('../fonts/sansation_light.svg#sansation_light') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+@font-face
+	font-family: 'sansation_bold'
+	src: url('../fonts/sansation_bold.eot')
+	src: url('../fonts/sansation_bold.eot?#iefix') format('embedded-opentype'), url('../fonts/sansation_bold.woff') format('woff'), url('../fonts/sansation_bold.ttf') format('truetype'), url('../fonts/sansation_bold.svg#sansation_bold') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+%liberator
+	font-family: 'liberator', Arial, sans-serif
+	font-weight: normal
+
+%sansation
+	font-family: 'sansation', Verdana, sans-serif
+	font-weight: normal
+
+%sansation_light
+	font-family: 'sansation_light', Verdana, sans-serif
+	font-weight: normal
+
+%sansation_bold
+	font-family: 'sansation_bold', Verdana, sans-serif
+	font-weight: normal
+
+
+
+/* ****************** GENERAL ************** */
+
+body
+	background: transparent
+	@extend %sansation
+	font-size: 13px		
+	
+	
+/* -------- LAYOUT ------- */
+img
+	margin: 0 auto 10px
+	max-width: 100%
+	
+.wrap
+	background: transparent url(#{$img}mobile_wrap_background.png) 0 0 no-repeat
+	background-size: 100%
+	padding: 5px 20px 10px
+
+.logo
+	background: url(#{$img}surfboard/termite_gray.png) center
+	display: block
+	height: 160px
+	max-width: 100%
+	width: 245px	
+	
+.termite
+	.logo
+		background-image: url(#{$img}surfboard/termite_gray.png)
+
+.mahi
+	.logo
+		background-image: url(#{$img}surfboard/mahi_gray.png)
+
+.simmons
+	.logo
+		background-image: url(#{$img}surfboard/simmons_gray.png)
+		
+		
+.chaneque
+	.logo
+		background-image: url(#{$img}surfboard/chaneque_gray.png)
+		
+		
+.jelly_bean
+	.logo
+		background-image: url(#{$img}surfboard/jelly_bean_gray.png)
+		
+		
+.lemigun
+	.logo
+		background-image: url(#{$img}surfboard/lemigun_gray.png)
+		
+.traveler
+	.logo
+		background-image: url(#{$img}surfboard/traveler_color.png)
+		
+		
+.snot_rocket
+	.logo
+		background-image: url(#{$img}surfboard/snot_rocket_gray.png)
+		
+		
+.pirate_plank
+	.logo
+		background-image: url(#{$img}surfboard/pirate_plank_gray.png)
+		
+		
+.out_of_step
+	.logo
+		background-image: url(#{$img}surfboard/out_of_step_gray.png)
+		
+		
+.the_hunter
+	.logo
+		background-image: url(#{$img}surfboard/the_hunter_gray.png)
+		
+		
+.the_caveman	
+	.logo
+		background-image: url(#{$img}surfboard/the_caveman_gray.png)	
+	
+	
+	
+	
+.col-xs-5
+	.wrap
+		padding: 15px 20px
+		
+	table
+		background: url(#{$img}small_wrap_line.png) center top no-repeat
+		background-size: 100% 2px
+		color: #595959
+		font-size: 11px
+		@extend %sansation_bold
+		text-align: center
+		width: 100%
+
+		.first
+			background: url(#{$img}small_wrap_line.png) center bottom no-repeat
+			background-size: 100% 2px
+
+	th
+		color: #333333
+		@extend %liberator
+		font-size: 11px
+		padding: 5px 0
+		text-align: center
+
+	tr.pair
+		background: #ebebeb
+
+	tr.pair.second
+		border-top: 2px solid #f5f5f5
+
+
+	
+.col-xs-7
+		
+
+	h3
+		background: url(#{$img}big_wrap_line.png) center top no-repeat
+		background-size: 100% 2px
+		color: #333333
+		@extend %liberator
+		font-size: 11px
+		letter-spacing: 0.01em
+		padding: 5px 0 0
+
+		em
+			color: #00caff
+			font-size: 10px
+			font-style: normal
+
+		span
+			background: url(#{$img}big_wrap_line.png) center bottom no-repeat
+			background-size: 100% 2px
+			display: block
+			padding: 0 0 5px
+			
+		img
+			display: block
+			margin: 0 auto 25px

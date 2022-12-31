@@ -1,0 +1,387 @@
+/* ****************** RESPONSIVE ************** */	
+
+/* ****************** LAYOUT ************** */	
+/* ------------- Header -------------- */
+
+@media screen and (max-width: 767px)
+	#header
+		padding: 0 5% 5px 8%
+	.brand
+		min-width: 130px
+		float: right
+		
+	#showLeftPush	
+		background: url(#{$img}toggle_bkg.png) center center no-repeat
+		height: 60px
+		width: 50px
+		margin: 0
+		float: left
+		
+		&:hover, &:active
+			background-color: rgba(255, 255, 255, .5)
+	.big_menu
+		display: none
+
+
+/* ****************** SURFBOARDS ************** */			
+			
+@media screen and (max-width: 1084px)
+	.masonry	
+		width: 735px	
+@media screen and (max-width: 767px)
+
+	#surfboards
+	
+		.mobile_nav
+			background: #7d7d7d
+			display: block
+			@include box-sizing("border-box")
+			text-align: center
+			padding: 0 20px
+			width: 100%
+			z-index: 2010
+		
+			a
+				background: url(#{$img}mobile_nav_a.png)no-repeat center 
+				background-size: 100% 100%
+				box-sizing: border-box
+				display: inline-block
+				width: 30%
+				margin: 10px 0
+				padding: 15px 0
+				color: #656565
+				font-size: 1.5em
+				
+				&:hover, &:active
+					text-decoration: none
+					color: #858585
+
+	
+	.masonry	
+		width: 500px
+		margin: 0 auto
+		
+		.col-xs-7, .col-xs-5
+			padding-left: 15px
+			padding-right: 15px
+			width: 100%
+			
+		.table_container
+			table
+				display: none
+	
+		.item.gigante
+			background: #7d7d7d
+			position: fixed !important
+			@include box-sizing(border-box)
+			top: 0 !important
+			left: 0 !important
+			padding: 90px 20px 0
+			width: 100% !important
+			height: 100% !important
+			overflow: scroll
+			min-width: 320px
+			z-index: 2000 !important
+			
+			table
+				display: none
+			
+			.carousel_container
+				float: left
+				width: 40%
+				.carousel
+					width: 100%
+				
+				.carousel-inner
+					width: 190px
+					margin: 0 auto
+					
+			.table_mobile.table_container
+				clear: left
+				display: inline-block
+				float: left
+				height: 200px
+				margin-top: 20px
+				
+				table
+					display: table
+					
+			.wrap
+				background-size: 100% 100%
+				@include box-sizing(border-box)
+				margin-bottom: 20px
+				float: right
+				height: 612px
+				width: 56%
+				p
+					font-size: 14px
+			.logo
+				margin: 0 auto
+				width: 100%
+				
+			.table_container
+				background: url(#{$img}mazoneri_wrap_background.png) 0 0 no-repeat
+				background-size: 100% 100%
+				display: none
+				padding: 10px
+				width: 100%
+				
+			.closer
+				display: none
+			.carousel-inner
+				width: 100%
+						
+		.item
+			.big_logo
+				background-image: url(#{$img}surfboard/sprite_blue_logos.jpg)
+		
+@media screen and (min-width: 768px)		
+	.masonry
+		.item.gigante
+			
+			.wrap
+				background: transparent url(#{$img}mazoneri_wrap_background.png) 0 0 no-repeat
+			
+	#surfboards
+
+		.mobile_nav
+			display: none
+@media screen and (max-width: 550px)
+	.cbp-spmenu 
+		ul.sections 
+			a
+				padding: 12px 15px
+		div.social
+			ul
+				li
+					a
+						margin: 10px 5px
+	.masonry	
+		width: 340px
+		margin: 0 auto
+		.item
+			.big_logo
+				background-size: auto
+			.termite
+		.item.gigante
+			.logo
+				background-size: 140px auto
+				height: 120px
+			.wrap
+				padding: 6px 6px 6px 10px
+				height: 500px
+				p
+					font-size: 10px
+				h3
+					margin-top: 5px
+			.carousel
+				height: 279px
+			.carousel_container
+				.carousel-inner
+					width: 112px
+					margin: 0 auto
+					.item
+						width: 112px
+						height: 279px
+						background-size: auto 200%
+		.the_caveman
+			.big_logo
+				background-position: center 0
+				&:hover
+					background-position: center 0
+			.logo
+				background-position: center 0
+			.front
+				background-position: -1235px bottom
+			.back
+				background-position: -1235px top
+		.snot_rocket
+			.big_logo
+				background-position: center -1199px
+				&:hover
+					background-position: center -1199px
+			.logo
+				background-position: center -987px
+			.front
+				background-position: -283px bottom
+			.back
+				background-position: -283px top
+		.the_hunter
+			.big_logo
+				background-position: center -1499px
+				&:hover
+					background-position: center -1499px
+			.logo
+				background-position: center -1229px
+			.front
+				background-position: -1100px bottom
+			.back
+				background-position: -1100px top
+		.out_of_step
+			.big_logo
+				background-position: center -749px
+				&:hover
+					background-position: center -749px
+			.logo
+				background-position: center -617px
+			.front
+				background-position: -692px bottom
+			.back
+				background-position: -692px top
+		.termite
+			.big_logo
+				background-position: center -1349px	
+				&:hover
+					background-position: center -1349px
+			.logo
+				background-position: center -1111px
+			.front
+				background-position: -1368px bottom
+		.jelly_bean
+			.big_logo
+				background-position:  center -300px		
+				&:hover
+					background-position: center -300px	
+			.logo
+				background-position: center -252px
+			.front
+				background-position: -962px bottom
+			.back
+				background-position: -962px top
+		.traveler
+			.big_logo
+				background-position: center -1649px	
+				&:hover
+					background-position: center -1649px	
+			.logo
+				background-position: center -1361px
+			.front
+				background-position: -148px bottom
+			.back
+				background-position: -148px top
+		.semigun
+			.big_logo
+				background-position:  center -1049px	
+				&:hover
+					background-position: center -1049px	
+			.logo
+				background-position: center -870px
+			.front
+				background-position: -417px bottom
+			.back
+				background-position: -417px top
+		.pirate_plank
+			.big_logo
+				background-position: center -899px	
+				&:hover
+					background-position: center -899px	
+			.logo
+				background-position: center -745px
+			.front
+				background-position: -555px bottom
+			.back
+				background-position: -555px top
+		.mahi
+			.big_logo
+				background-position: center -449px
+				&:hover
+					background-position: center -449px	
+			.logo
+				background-position: center -378px
+			.front
+				background-position: -827px bottom
+			.back
+				background-position: -827px top
+		.chaneque
+			.big_logo
+				background-position: center -150px
+				&:hover
+					background-position: center -150px	
+			.logo
+				background-position: center -127px
+			.front
+				background-position: -1506px bottom
+			.back
+				background-position: -1506px top
+		.simmons
+			.big_logo
+				background-position: center -600px	
+				&:hover
+					background-position: center -600px	
+			.logo
+				background-position: center -495px
+			.front
+				background-position: -12px bottom
+			.back
+				background-position: -12px top	
+		table
+			font-size: 8px
+			.small
+				font-size: 6px
+				top: -1px
+			th, td
+				text-align: left
+@media screen and (max-width: 320px)	
+	.masonry
+		margin: 0 0 0 -10px
+/* ****************** TEAM ************** */			
+
+@media screen and (max-width: 767px)
+	#team
+		.info
+			h3
+				margin-top: 20px
+				font-size: 3em
+			.location
+				font-size: 1.5em
+			.experience
+				line-height: 1.8em
+				font-size: 1.5em
+				
+
+/* ****************** CONTACT ************** */
+
+
+@media screen and (max-width: 767px)
+	#man-cave-side
+		margin-top: 40px
+		p
+			font-size: 55px
+	
+	p
+		font-size: 1.5em
+		margin: 0
+	#dealers
+		p
+			font-size: 19px
+		.dealer_instance
+			p
+				font-size: 14px
+@media screen and (max-width: 555px)
+	#man-cave-side
+		p
+			font-size: 45px
+
+/* ****************** SECTION HEADINGS ************** */
+h1
+	display: none
+	@extend %liberator
+@media screen and (max-width: 767px)
+	h1
+		display: block
+		background: url(#{$img}responsive_headings.png) no-repeat center top
+		height: 80px
+		padding: 20px 0
+		margin: 20px 0 40px
+		font-size: 40px
+		text-align: center
+	h1.surfboards
+		background-position: center top
+	h1.team
+		background-position: center -80px
+	h1.dealers
+		background-position: center -160px
+	h1.contact
+		background-position: center -240px
+	.sb
+		display: none

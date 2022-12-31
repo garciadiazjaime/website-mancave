@@ -1,0 +1,79 @@
+/* General styles for all menus */
+.cbp-spmenu 
+	background: #e2e2e2
+	@include box-shadow(#d2d2d2 -10px 0 40px inset)
+	box-sizing: border-box
+	height: 100%
+	position: fixed
+	@extend %liberator
+	top: 0px
+	z-index: 50
+	width: 100%
+	padding-top: 20px
+	left: -100%
+	h3 
+		color: #FFF
+	ul.sections
+		display: block
+		padding: 0
+		margin: 0
+		width: 100%
+		li
+			list-style: none
+		a 	
+			display: block
+			color: #323232
+			font-size: 30px
+			padding: 20px 15px
+			text-decoration: none
+			text-align: center
+			&:hover, &:active
+				background: none
+				color: #00caff
+	.social
+		display: block
+		text-align: center
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+			li
+				display: inline-block
+				a
+					background: url(#{$img}social_mobile.png) no-repeat center left
+					height: 58px
+					width: 58px
+					@include border-radius(4px)
+					display: block
+					margin: 10px 15px
+					line-height: 5000em 
+					overflow: hidden
+					&:hover
+						background-color: #00caff
+			li.facebook
+				a
+					background-position: center left
+			li.twitter
+				a
+					background-position: center center
+			li.instagram
+				a
+					background-position: center right
+
+/* Vertical menu that slides from the left or right */
+.cbp-spmenu-left.cbp-spmenu-open 
+	left: 0px
+
+/* Push classes applied to the body */
+.cbp-spmenu-push
+	overflow-x: hidden
+	position: relative
+	left: 0
+
+.cbp-spmenu-push-toright 
+	left: 100%
+
+/* Transitions */
+
+.cbp-spmenu, .cbp-spmenu-push, #header 
+	@include transition(all 0.3s ease)

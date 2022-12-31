@@ -1,0 +1,40 @@
+/* line 11, ../../sass/mixins.sass */
+.placeholders::-webkit-input-placeholder, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: black;
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 13, ../../sass/mixins.sass */
+.placeholders:-moz-placeholder, input:-moz-placeholder, textarea:-moz-placeholder {
+  color: black;
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 15, ../../sass/mixins.sass */
+.placeholders::-moz-placeholder, input::-moz-placeholder, textarea::-moz-placeholder {
+  color: black;
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 17, ../../sass/mixins.sass */
+.placeholders.placeholder, input.placeholder, textarea.placeholder {
+  color: black;
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 19, ../../sass/mixins.sass */
+.placeholders:-ms-input-placeholder, input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: black;
+  font-family: "liberator", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}

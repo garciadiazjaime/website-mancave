@@ -1,0 +1,965 @@
+/* ----------- SETUP -------------- */	
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/filter"
+@import "compass/css3/font-face"
+@import "compass/css3/images"
+@import "compass/css3/opacity"
+@import "compass/css3/transition"
+@import "compass/css3/box-sizing"
+
+@import "mixins.sass"
+
+$img: "../img/"
+
+/* ****************** FONTFACE ************** */
+@font-face
+	font-family: 'liberator'
+	src: url('../fonts/liberator.eot')
+	src: url('../fonts/liberator.eot?#iefix') format('embedded-opentype'), url('../fonts/liberator.woff') format('woff'), url('../fonts/liberator.ttf') format('truetype'), url('../fonts/liberator.svg#liberator') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+@font-face
+	font-family: 'sansation'
+	src: url('../fonts/sansation.eot')
+	src: url('../fonts/sansation.eot?#iefix') format('embedded-opentype'), url('../fonts/sansation.woff') format('woff'), url('../fonts/sansation.ttf') format('truetype'), url('../fonts/sansation.svg#sansation') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+@font-face
+	font-family: 'sansation_light'
+	src: url('../fonts/sansation_light.eot')
+	src: url('../fonts/sansation_light.eot?#iefix') format('embedded-opentype'), url('../fonts/sansation_light.woff') format('woff'), url('../fonts/sansation_light.ttf') format('truetype'), url('../fonts/sansation_light.svg#sansation_light') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+@font-face
+	font-family: 'sansation_bold'
+	src: url('../fonts/sansation_bold.eot')
+	src: url('../fonts/sansation_bold.eot?#iefix') format('embedded-opentype'), url('../fonts/sansation_bold.woff') format('woff'), url('../fonts/sansation_bold.ttf') format('truetype'), url('../fonts/sansation_bold.svg#sansation_bold') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+%liberator
+	font-family: 'liberator', Arial, sans-serif
+	font-weight: normal
+
+%sansation
+	font-family: 'sansation', Verdana, sans-serif
+	font-weight: normal
+
+%sansation_light
+	font-family: 'sansation_light', Verdana, sans-serif
+	font-weight: normal
+
+%sansation_bold
+	font-family: 'sansation_bold', Verdana, sans-serif
+	font-weight: normal
+
+
+
+/* ****************** GENERAL ************** */
+body
+	background: white
+	color: #333333
+	@extend %sansation
+	font-size: 13px
+	opacity: 0
+	min-width: 320px
+hr
+	background: url(#{$img}curved_line.png) center top repeat-x
+	border: none
+	height: 5px
+	width: 100%
+	
+strong	
+	@extend %sansation_bold
+	
+/* ****************** LAYOUT ************** */	
+/* ------------- Header -------------- */
+header
+	background: url(#{$img}header_bkg.png) left bottom repeat-x
+	padding: 20px 5% 30px 8%
+	min-width: 330px
+header.navbar
+	margin: 0
+.brand
+	display: block
+	float: left
+	background: url(#{$img}logo.png) center center no-repeat
+	background-size: 100% auto
+	height: 60px
+	width: 25%
+	max-width: 220px
+.big_menu
+	float: left
+	width: 75%
+	#main_menu
+		position: relative
+		@extend %liberator
+		font-size: 20px
+		margin: 0 0 0
+		text-transform: uppercase
+		text-align: right
+		width: 85%
+		li.active
+			a
+				color: #00caff			
+		li
+			display: inline-block
+			margin: 0
+			margin-right: 2%
+			&:hover, &:focus, &:active
+				a
+					background: none
+					color: #00caff
+
+			.strikeout
+				pointer-events: none
+				position: absolute
+				width: 100%
+				margin-top: -29px
+				margin-bottom: -9px
+				overflow: hidden
+				text-align: center
+				display: none
+				z-index: 9999
+				img
+					margin-left: -50px
+					margin-right: -50px
+			a
+				display: block
+				color: #333333
+				padding: 15px 10px 5px
+					
+		li.active
+			.strikeout
+				display: block
+			a
+				color: #00caff
+	.navbar-nav>li
+		display: inline-block
+		float: none
+
+	.social
+		display: block
+		float: right
+		height: 20px
+		top: 13px
+		right: 0
+		width: 15%
+		
+		ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+		
+		li
+			display: inline-block
+			height: 19px
+			margin: 14px 0
+			margin-left: 10%
+			vertical-align: top
+			width: 19px
+			
+			a
+				background: url(#{$img}social_sprite.png) 0 0 no-repeat
+				display: block
+				height: 100%
+				line-height: 5000em 
+				overflow: hidden
+				width: 100%
+			
+			
+		li.facebook
+			margin-left: 0
+			
+			a:hover
+				background-position: 0 -32px
+		
+		li.twitter
+			a
+				background-position: -42px 0
+				
+				&:hover
+					background-position: -42px -32px
+
+		li.instagram
+			a
+				background-position: -81px 0
+
+				&:hover
+					background-position: -81px -32px		
+/* ****************** Banner ************** */
+
+#main_banner
+	background: url(#{$img}banner_background.jpg) center top no-repeat
+	background-size: cover
+	position: fixed
+	height: 95%
+	overflow: hidden
+	top: 5%
+	width: 100%
+	z-index: 0
+	
+	h1
+		display: block
+		background: none
+		height: 100%
+		line-height: 5000em
+		margin: 0
+		width: 100%
+#main_content
+	margin-top: -5px
+	position: relative
+	z-index: 5
+	width: 100%
+	overflow: hidden
+
+.special_border
+	display: block
+	position: relative
+	height: 21px
+	z-index: 5
+	width: 100%
+.topper
+	margin-top: -20px
+	margin-bottom: -6px
+.bottomer
+	margin-top: -6px
+	margin-bottom: -9px
+#main_banner_bottom
+	background: url(#{$img}banner_bottom.png) repeat-x center bottom
+	height: 25px
+.team_border_top
+	background: url(#{$img}team_top.png) repeat-x center bottom
+.team_border_bottom
+	background: url(#{$img}team_bottom.png) repeat-x center bottom
+.contact_border_top
+	background: url(#{$img}contact_top.png) repeat-x center bottom
+.contact_border_bottom
+	background: url(#{$img}contact_bottom.png) repeat-x center bottom
+.sb
+	background: url(#{$img}section_breaks.png) no-repeat
+	background-size: 100% 160px
+	display: block
+	position: relative
+	height: 40px
+	padding: 0
+	z-index: 1000
+.sb_team_top
+	background-position: center top
+	margin-top: -30px
+	margin-bottom: -23px
+.sb_team_bottom
+	background-position: center -40px
+	margin-top: -10px
+	margin-bottom: -40px
+.sb_contact_top
+	background-position: center -80px
+	margin-top: -24px
+	margin-bottom: -30px
+.sb_contact_bottom
+	background-position: center bottom
+	margin-top: -40px
+	margin-bottom: -15px
+.row
+	padding-top: 40px
+	padding-bottom: 40px
+	
+/* ****************** SURFBOARDS ************** */
+#surfboards
+	background: #f2f2f2 url(#{$img}pattern.jpg) repeat
+	
+	.mobile_nav
+		left: 0
+		position: fixed
+		top: 0
+		a
+			@extend %liberator
+		
+	.mobile_nav.hidden
+		display: none
+
+		a
+			@extend %liberator
+			
+.masonry:after
+	clear: both
+	content: ''
+	display: block
+	
+.masonry
+	background: transparent
+	margin: 0 auto
+	text-align: center
+	width: 1085px
+	
+	.small
+		font-size: 9px
+		top: -2px
+	
+	h3
+		background: url(#{$img}big_wrap_line.png) center top no-repeat
+		background-size: 100% 2px
+		color: #333333
+		@extend %liberator
+		font-size: 11px
+		letter-spacing: 0.01em
+		padding: 5px 0 0
+		
+		em
+			color: #00caff
+			font-size: 10px
+			font-style: normal
+			
+		span
+			background: url(#{$img}big_wrap_line.png) center bottom no-repeat
+			background-size: 100% 2px
+			display: block
+			padding: 0 0 5px
+	.closer
+		display: none
+		position: absolute
+		color: #7d7d7d
+		top: 25px
+		cursor: pointer
+		right: 34px
+		padding: 5px
+		&:hover
+			color: #00caff
+	.mini_social_bar
+		background: url(#{$img}small_wrap_line.png) center top no-repeat
+		background-size: 100% 2px
+		padding: 8px 0
+		
+		img
+			margin: 0
+	
+	.table_mobile
+		display: none
+		table
+			display: none
+	
+	table
+		background: url(#{$img}small_wrap_line.png) center top no-repeat
+		background-size: 100% 2px
+		color: #595959
+		font-size: 11px
+		@extend %sansation_bold
+		text-align: center
+		width: 100%
+		
+		.first
+			background: url(#{$img}small_wrap_line.png) center bottom no-repeat
+			background-size: 100% 2px
+		
+		th
+			color: #333333
+			@extend %liberator
+			font-size: 11px
+			padding: 3px 0
+			text-align: center
+			
+		tr.pair
+			background: #ebebeb
+		
+		tr.pair.second
+			border-top: 2px solid #f5f5f5
+		
+		
+	img
+		display: block
+		margin: 0 auto 25px
+	
+	.col-xs-5
+		padding-left: 0
+		padding-right: 0
+		
+		h3
+			background-image: url(#{$img}small_wrap_line.png)
+			margin: 10px 0
+			
+			span
+				background-image: url(#{$img}small_wrap_line.png) 
+		
+		
+	> .item 
+		background-color: #ebebeb
+		border: 2px solid #f9f9f9
+		float: left
+		font-size: 16px
+		height: 217px
+		line-height: 1em
+		padding: 0
+		text-align: left
+		//@include transition(padding .2s)
+		width: 245px
+		overflow: hidden
+		
+		&:hover
+			background: lighten(#ebebeb, 2)
+			cursor: pointer
+			
+			
+			.wrap
+				background: lighten(#ebebeb, 2)	
+				
+						
+	.item.gigante
+		background: transparent url(#{$img}mazoneri_giant_background.png) 0 0 no-repeat
+		background-size: cover
+		height: 434px
+		padding: 20px
+		width: 735px
+		outline: none
+		border: none
+		
+		&:hover
+			cursor: default
+		.carousel_container
+			display: inline-block	
+				
+		.wrap
+			background: transparent url(#{$img}mazoneri_wrap_background_xs.jpg) 0 0 no-repeat
+			background-size: 100% 3451px
+			display: inline-block
+			height: 100%
+			margin: 0 0 0 
+			padding: 25px
+			width: 490px
+			vertical-align: top
+		.closer
+			display: block
+		.row
+			height: 100%
+			opacity: 1
+		
+		.logo, .big_logo		
+			@include filter(none)
+			
+		.big_logo
+			display: none
+			
+		.logo
+			height: 150px
+		
+	.wrap
+		background: transparent
+		background-size: 100%
+		overflow: hidden
+	
+	.row	
+		height: 0
+		opacity: 0
+		padding-top: 0
+		@include transition(.6s)
+	
+	.item
+		.logo, .big_logo
+			background: url(#{$img}surfboard/sprite_dark-gray_logos.jpg) center 0 no-repeat
+			display: block
+			height: 217px
+			width: 245px
+		.more_info
+			text-decoration: none
+			color: #00caff
+			
+		
+		.big_logo
+			background-image: url(#{$img}surfboard/sprite_gray_logos.jpg)
+			
+			&:hover
+				background-image: url(#{$img}surfboard/sprite_blue_logos.jpg)
+		
+	.termite
+		.big_logo
+			background-position: center -1953px
+			
+			&:hover
+				background-position: center -1953px
+				
+		.logo
+			background-position: center -1986px
+	
+	.mahi
+		.big_logo
+			background-position: center -650px
+			
+			&:hover
+				background-position: center -650px
+				
+		.logo
+			background-position: center -678px
+	
+	.simmons
+		.big_logo
+			background-position: center -867px
+			
+			&:hover
+				background-position: center -867px
+				
+		.logo
+			background-position: center -902px
+			
+			
+	.chaneque
+		.big_logo
+			background-position: center -217px
+			
+			&:hover
+				background-position: center -217px
+				
+		.logo
+			background-position: center -253px
+			
+			
+	.jelly_bean
+		.big_logo
+			background-position:  center -435px
+			&:hover
+				background-position:  center -435px
+				
+		.logo
+			background-position:  center -469px
+			
+			
+	.semigun
+		.big_logo
+			background-position:  center -1520px
+			
+			&:hover
+				background-position: center -1520px
+				
+		.logo
+			background-position:  center -1552px
+			
+	.traveler
+		.big_logo
+			background-position: center -2388px
+			
+			&:hover
+				background-position: center -2388px
+				
+		.logo
+			background-position: center -2418px
+			
+			
+	.snot_rocket
+		.big_logo
+			background-position: center -1736px
+			
+			&:hover
+				background-position: center -1736px
+				
+		.logo
+			background-position: center -1767px
+			
+			
+	.pirate_plank
+		.big_logo
+			background-position: center -1301px
+			
+			&:hover
+				background-position: center -1301px
+				
+		.logo
+			background-position: center -1339px
+			
+			
+	.out_of_step
+		.big_logo
+			background-position: center -1084px
+			
+			&:hover
+				background-position: center -1084px
+				
+		.logo
+			background-position: center -1115px
+			
+			
+	.the_hunter
+		.big_logo
+			background-position: center -2170px
+			
+			&:hover
+				background-position: center -2170px
+				
+		.logo
+			background-position: center -2197px
+			
+			
+	.the_caveman
+		.big_logo
+			background-position: center 0
+			
+			&:hover
+				background-position: center 0
+				
+		.logo			
+			background-position: center -44px
+/* ****************** CAROUSEL ************** */
+.masonry
+	.carousel_container
+		display: none
+	.carousel
+		width: 190px
+		height: 390px
+		vertical-align: top
+		.item
+			background-image: url(#{$img}surfboards.jpg)
+			width: 190px
+			height: 390px
+	.carousel-control
+		background: none
+		font-weight: normal
+		font-family: "Arial Narrow", sans-serif	
+		text-shadow: none
+		font-size: 60px	
+		top: auto
+		bottom: 20px
+		.right, .left
+			background-image: none	
+				
+	.termite
+		.front
+			background-position: -1900px bottom
+		.back
+			background-position: -1900px top
+		.wh
+			background-position: 0 -45px
+		.sl
+			background-position: right 0
+			
+	.mahi
+		.front
+			background-position: -1140px bottom
+		.back
+			background-position: -1140px top
+		.wh
+			background-position: 0 -90px
+		.sl
+			background-position: right -31px
+	.simmons
+		.front
+			background-position: 0 bottom
+		.back
+			background-position: 0 top
+		.wh
+			background-position: 0 -90px
+		.sl
+			background-position: right -31px
+	.chaneque
+		.front
+			background-position: -2090px bottom
+		.back
+			background-position: -2090px top
+		.wh
+			background-position: 0 -90px
+		.sl
+			background-position: right -31px
+	.jelly_bean
+		.front
+			background-position: -1330px bottom
+		.back
+			background-position: -1330px top
+		.wh
+			background-position: 0 -90px
+		.sl
+			background-position: right 0
+	.semigun
+		.front
+			background-position: -570px bottom
+		.back
+			background-position: -570px top
+		.wh
+			background-position: 0 -180px
+		.sl
+			background-position: right -93px
+	.traveler
+		.front
+			background-position: -190px bottom
+		.back
+			background-position: -190px top
+		.wh
+			background-position: 0 -135px
+		.sl
+			background-position: right -62px
+	.snot_rocket
+		.front
+			background-position: -380px bottom
+		.back
+			background-position: -380px top
+		.wh
+			background-position: 0 0
+		.sl
+			background-position: right 0
+	.pirate_plank
+		.front
+			background-position: -760px bottom
+		.back
+			background-position: -760px top
+		.wh
+			background-position: 0 -90px
+		.sl
+			background-position: right -31px
+	.out_of_step
+		.front
+			background-position: -950px bottom
+		.back
+			background-position: -950px top
+		.wh
+			background-position: 0 -90px
+		.sl
+			background-position: right -31px
+	.the_hunter
+		.front
+			background-position: -1520px bottom
+		.back
+			background-position: -1520px top
+		.wh
+			background-position: 0 -90px
+		.sl
+			background-position: -31px right
+	.the_caveman
+		.front
+			background-position: -1710px  bottom
+		.back
+			background-position: -1710px  top
+		.wh
+			background-position: 0 -45px
+		.sl
+			background-position: 0 right
+	.specs
+		background-image: url(#{$img}board_specs.jpg)
+		display: block
+		width: 160px
+		margin: 0 auto
+		max-width: 100%
+		
+	.wh
+		background-position-x: left
+		height: 45px
+		margin-bottom: 7px
+		
+	.sl
+		background-position-x: right
+		height: 31px
+		margin-bottom: 8px
+	
+/* ****************** TEAM ************** */	
+#team
+	background: #ebebeb url(#{$img}pattern_dark.jpg) repeat	
+	hr
+		background: url(#{$img}small_curved_line.png) center 0 no-repeat
+		background-size: 100% 100%
+		border: none
+		height: 2px
+		margin: 0
+		width: 100%
+
+	.img
+		img
+			width: 100%
+	.info		
+		h3
+			margin-top: 0
+			@extend %liberator
+			font-size: 30px
+			
+	.location
+		@extend %sansation_light
+		font-size: 15px
+		margin: 0 0 14px
+		
+	.story
+		padding: 18px 0 14px
+		
+		p
+			margin: 0 0 10px
+			
+	.experience
+		line-height: 1.3em
+		padding: 17px 0
+		
+		ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+			
+			em
+				@extend %sansation_bold
+				font-size: 13px
+				font-style: normal
+				
+	ul.visual_evidence
+		list-style-type: none
+		margin: 20px 0 0
+		padding: 0
+
+		li
+			display: inline-block
+			height: 23px
+			margin: 0 0 0 18px
+			width: 58px
+		
+		a	
+			background: #e1e1e1
+			color: #808080
+			display: block
+			@extend %liberator
+			font-size: 14px
+			height: 100%
+			padding: 4px 6px
+			text-transform: uppercase
+		
+			&:hover
+				background: lighten(#e1e1e1, 10)
+				text-decoration: none
+		
+		li.first
+			margin: 0
+				
+/* ****************** DEALERS ************** */	
+#dealers
+	background: #f2f2f2 url(#{$img}pattern.jpg) repeat
+	@extend %liberator
+	font-size: 35px
+	text-transform: uppercase
+	.row
+		padding-top: 0
+		padding-bottom: 0
+	
+	a
+		color: #00caff
+		
+		&:hover
+			color: lighten(#00caff, 10)
+			text-decoration: none
+			
+	p
+		margin: 35px 0
+	ul
+		font-size: 14px
+		list-style-type: none
+
+		p
+			margin: 0 0 10px
+		
+		li
+			padding-top: 15px
+			
+			a
+				color: #333333
+				
+				&:hover
+					color: lighten(#333333, 10)
+					text-decoration: none
+			
+		p.directions
+			background: url(#{$img}map_icon.png) left top no-repeat
+			padding: 1px 0 4px 30px
+			
+/* ****************** CONTACT ************** */			
+#contact
+	background: #ebebeb url(#{$img}pattern_dark.jpg) repeat
+	h2
+		@extend %liberator
+		font-size: 35px
+		margin: 0 0 30px
+		text-transform: uppercase
+		
+	.custom_textbox, textarea
+		background: #f9f9f9
+		border: none
+		color: #333
+		@extend %sansation_bold
+		font-size: 13px
+		letter-spacing: .03em
+		margin: 0 0 15px
+		padding: 12px 10px
+		width: 100%
+		
+	textarea
+		height: 255px
+	
+	.custom_submit
+		background: #e1e1e1
+		border: none
+		color: #00caff
+		display: block
+		@extend %liberator
+		font-size: 18px
+		margin: 20px 0 0 auto
+		padding: 8px 0
+		text-align: center
+		text-transform: uppercase
+		width: 65px
+		
+		&:hover
+			background: #00caff
+			color: #f9f9f9
+
+	.required
+		border: 1px solid red
+
+	#contact_msg
+		margin: 10px 0 0
+		text-align: center
+		@extend %liberator
+		font-size: 18px
+		background: none
+	.bg-success
+		color: #00caff
+	.bg-danger
+		color: #DD5500
+
+	#form-msg
+		ul
+			margin: 0
+			padding: 0
+		li
+			list-style: none
+		font-size: 18px
+		font-weight: bold
+
+
+			
+#small_logo
+	background: url(#{$img}small_logo.png) 0 0 no-repeat
+	display: block
+	height: 56px
+	margin: 0 0 28px
+	width: 203px
+	
+#man-cave-side
+	p
+		color: #00caff
+		@extend %liberator
+		font-size: 50px
+		margin: 0
+		text-transform: uppercase
+		line-height: 1
+.footnote
+	height: 60px
+	background: #f2f2f2 url(#{$img}pattern.jpg) repeat
+	p
+		@extend %liberator
+		text-align: center
+		font-size: 18px
+		padding-top: 25px
+		color: #AAA
+		a
+			color: #888
+			&:active, &:hover
+				color: #AAA
+				text-decoration: none
+
+@import "fancybox.sass"	
+@import "push_menu.sass"
+@import "responsive.sass"	
